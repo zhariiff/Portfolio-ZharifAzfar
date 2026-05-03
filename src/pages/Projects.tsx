@@ -24,9 +24,10 @@ export function Projects() {
                         </h2>
                     </ScrollReveal>
 
-                    {resumeData.projects.map((project, index) => (
-                        <ScrollReveal key={index} delay={0.1}>
-                            <Card variant="hud" glow className="p-0 overflow-hidden">
+                    <div className="space-y-8">
+                        {resumeData.projects.map((project, index) => (
+                            <ScrollReveal key={index} delay={0.1}>
+                                <Card variant="hud" glow className="p-0 overflow-hidden">
                                 {/* Project Header with gradient */}
                                 <div className="relative p-6 pb-4 bg-gradient-to-r from-neon-cyan/10 via-neon-purple/10 to-neon-pink/10">
                                     {/* Type badge */}
@@ -43,6 +44,53 @@ export function Projects() {
                                     <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 dark:text-white whitespace-pre-line">
                                         {project.title}
                                     </h3>
+
+                                    {(project.repositoryUrl || project.reportUrl) && (
+                                        <div className="mt-5 flex flex-wrap gap-3">
+                                            {project.repositoryUrl && (
+                                                <a
+                                                    href={project.repositoryUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className={cn(
+                                                        'inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium',
+                                                        'bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink text-white',
+                                                        'bg-[length:200%_auto] shadow-lg shadow-neon-cyan/20 transition-all duration-300',
+                                                        'hover:bg-[position:100%_center] hover:shadow-neon-purple/30 hover:scale-[1.02]',
+                                                        'focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950'
+                                                    )}
+                                                    aria-label={`Open ${project.title.replace('\n', ' ')} GitHub repository`}
+                                                >
+                                                    View Repository
+                                                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17 17 7M9 7h8v8" />
+                                                    </svg>
+                                                </a>
+                                            )}
+
+                                            {project.reportUrl && (
+                                                <a
+                                                    href={project.reportUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className={cn(
+                                                        'inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium',
+                                                        'border border-neon-cyan/40 bg-gray-900/40 text-neon-cyan',
+                                                        'shadow-lg shadow-neon-cyan/10 transition-all duration-300',
+                                                        'hover:border-neon-cyan hover:bg-neon-cyan/10 hover:scale-[1.02]',
+                                                        'focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950'
+                                                    )}
+                                                    aria-label={`Open ${project.title.replace('\n', ' ')} PDF report`}
+                                                >
+                                                    View Report
+                                                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 3h7l5 5v13H7V3z" />
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3v5h5M10 14h6M10 18h4" />
+                                                    </svg>
+                                                </a>
+                                            )}
+                                        </div>
+                                    )}
 
                                     {/* Decorative elements */}
                                     <motion.div
@@ -88,7 +136,7 @@ export function Projects() {
                                                 Technologies Used:
                                             </p>
                                             <div className="flex flex-wrap gap-2">
-                                                {['Unity', 'VR Technology', 'C#', 'Interactive Design'].map((tech) => (
+                                                {project.technologies.map((tech) => (
                                                     <span
                                                         key={tech}
                                                         className={cn(
@@ -122,9 +170,10 @@ export function Projects() {
                                         />
                                     </div>
                                 </div>
-                            </Card>
-                        </ScrollReveal>
-                    ))}
+                                </Card>
+                            </ScrollReveal>
+                        ))}
+                    </div>
                 </section>
 
                 {/* Project Stats */}
