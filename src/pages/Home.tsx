@@ -84,7 +84,7 @@ export function Home() {
                                 visible: { opacity: 1, y: 0 }
                             }}
                         >
-                            Game Designer • Graphic Designer • Creative Technologist
+                            Fresh Graduate
                         </motion.h2>
 
 
