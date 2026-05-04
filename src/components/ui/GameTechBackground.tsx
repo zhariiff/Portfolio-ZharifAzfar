@@ -154,12 +154,12 @@ export function GameTechBackground() {
                 {"</>"}
             </motion.div>
 
-            <motion.div
+             {/*<motion.div
                 className="absolute bottom-[30%] right-[30%] text-9xl font-display font-bold text-gray-900/5 dark:text-white/5 rotate-12"
                 style={{ x: designTextX }}
             >
                 DESIGN
-            </motion.div>
+            </motion.div>*/}
 
         </div>
     );
