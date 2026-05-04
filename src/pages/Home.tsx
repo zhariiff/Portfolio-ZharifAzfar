@@ -84,7 +84,7 @@ export function Home() {
                                 visible: { opacity: 1, y: 0 }
                             }}
                         >
-                            Fresh Graduate
+                            Fresh Computer Science Graduate specializing in Multimedia Computing
                         </motion.h2>
 
 

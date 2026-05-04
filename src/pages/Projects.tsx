@@ -80,9 +80,9 @@ export function Projects() {
                                                         'hover:border-neon-cyan hover:bg-neon-cyan/10 hover:scale-[1.02]',
                                                         'focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950'
                                                     )}
-                                                    aria-label={`Open ${project.title.replace('\n', ' ')} PDF report`}
+                                                    aria-label={`Open ${project.title.replace('\n', ' ')} link`}
                                                 >
-                                                    View Report
+                                                    {'reportLabel' in project ? project.reportLabel : 'View Report'}
                                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 3h7l5 5v13H7V3z" />
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3v5h5M10 14h6M10 18h4" />
@@ -176,38 +176,6 @@ export function Projects() {
                     </div>
                 </section>
 
-                {/* Project Stats */}
-                <section>
-                    <ScrollReveal>
-                        <div className="grid gap-4 sm:grid-cols-3">
-                            {[
-                                { label: 'VR Environment', icon: '🎮', desc: 'Unity-based development' },
-                                { label: 'Interactive NPC', icon: '🤖', desc: 'User interaction prompts' },
-                                { label: 'Cross-Platform', icon: '💻', desc: 'PC & Laptop accessible' },
-                            ].map((stat, index) => (
-                                <motion.div
-                                    key={stat.label}
-                                    className={cn(
-                                        'glass-card p-6 text-center',
-                                        'hover:border-neon-cyan/30 transition-colors'
-                                    )}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.1 }}
-                                >
-                                    <div className="text-4xl mb-3">{stat.icon}</div>
-                                    <h3 className="font-display font-semibold text-gray-900 dark:text-white">
-                                        {stat.label}
-                                    </h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                                        {stat.desc}
-                                    </p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </ScrollReveal>
-                </section>
             </div>
         </PageShell>
     )

@@ -77,10 +77,21 @@ export function Resume() {
                                                 {edu.cgpa}
                                             </p>
 
+                                            {'descriptions' in edu && (
+                                                <ul className="mt-4 space-y-2">
+                                                    {edu.descriptions.map((description, i) => (
+                                                        <li key={i} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+                                                            <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-neon-cyan" />
+                                                            <span>{description}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+
                                             {edu.subjects && edu.subjects.length > 0 && (
                                                 <div className="mt-4">
                                                     <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                                        Among subjects taken:
+                                                        Relevant coursework:
                                                     </p>
                                                     <ul className="space-y-1">
                                                         {edu.subjects.map((subject, i) => (

@@ -67,7 +67,7 @@ export function Experience() {
 
                                             <div className="border-t border-gray-200 dark:border-gray-800 pt-4">
                                                 <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3">
-                                                    {index === 0 ? 'Key Achievements:' : 'Responsibilities:'}
+                                                    Responsibilities:
                                                 </h4>
                                                 <ul className="space-y-3">
                                                     {exp.responsibilities.map((resp, i) => (
@@ -86,11 +86,10 @@ export function Experience() {
                                                 </ul>
                                             </div>
 
-                                            {/* Show skills only for the Graphic Design internship */}
-                                            {index === 0 && (
+                                            {'skills' in exp && (
                                                 <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800">
                                                     <div className="flex flex-wrap gap-2">
-                                                        {['Canva', 'WordPress', 'Wix.com', 'Capcut', 'Adobe Premiere Pro', 'Content Writing'].map((skill) => (
+                                                        {exp.skills.map((skill) => (
                                                             <span
                                                                 key={skill}
                                                                 className={cn(
@@ -118,9 +117,9 @@ export function Experience() {
                     <ScrollReveal>
                         <div className="grid gap-4 sm:grid-cols-3">
                             {[
-                                { value: '7+', label: 'Months Experience', color: 'from-neon-cyan to-neon-purple' },
-                                { value: '2', label: 'Positions Held', color: 'from-neon-purple to-neon-pink' },
-                                { value: '8+', label: 'Skills Applied', color: 'from-neon-pink to-neon-cyan' },
+                                { value: '10+', label: 'Months Experience', color: 'from-neon-cyan to-neon-purple' },
+                                { value: '3', label: 'Positions Held', color: 'from-neon-purple to-neon-pink' },
+                                { value: '12+', label: 'Skills Applied', color: 'from-neon-pink to-neon-cyan' },
                             ].map((stat, index) => (
                                 <motion.div
                                     key={stat.label}

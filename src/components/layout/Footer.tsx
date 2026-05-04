@@ -50,7 +50,7 @@ export function Footer() {
                             </span>
                         </motion.div>
                         <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xs">
-                            Game Designer & Graphic Designer passionate about creating engaging digital experiences.
+                            Fresh Bachelor of Computer Science (Hons.) Multimedia Computing graduate passionate about interactive media, game development, and creative digital experiences.
                         </p>
                     </div>
 

@@ -9,32 +9,41 @@ export const resumeData = {
         email: 'zharifazfar61@gmail.com',
     },
 
-    summary: `I am a Multimedia Computing student with a passion for creating engaging digital experiences.
-Throughout my academic journey, I've worked with tools like Unity, Unreal Engine, and Construct to
-explore interactive media and creative technologies. My background in graphic design and content
-creation has helped me develop both technical and creative skills, while internships and part-time roles
-have strengthened my communication, adaptability, and teamwork. I'm excited to contribute to projects
-that combine design, technology, and user experience in meaningful ways.`,
+    summary: `I am a fresh Bachelor of Computer Science (Hons.) Multimedia Computing graduate with a strong interest in interactive media, game development, and creative digital experiences.
+Through academic projects and internship experiences, I have worked with tools such as Unity, Unreal Engine, Construct, Canva, CapCut, and Wix while developing both technical and creative skills.
+I also have exposure to big data and machine learning through academic projects involving data preprocessing, visualization, and K-Nearest Neighbors (KNN) classification using Python.
+I am currently looking for opportunities where I can contribute, grow with a supportive team, and continue learning new technologies in design, development, data, and user experience.`,
 
     education: [
         {
             degree: 'Bachelor of Computer Science (Hons.) Multimedia Computing',
-            period: '2023–2025 (Expected)',
-            institution: 'Universiti Teknologi Mara Kampus Jasin (UiTM)',
-            cgpa: 'Current CGPA:2.58',
+            period: 'Mar 2023 - Dec 2025',
+            institution: 'Universiti Teknologi MARA',
+            cgpa: 'CGPA: 2.93',
+            descriptions: [
+                'Developed practical knowledge in multimedia application development, interactive systems, and user-centered digital experiences.',
+                'Built technical foundations in software development, computer graphics, and mobile technologies through academic projects and collaborative coursework.',
+                'Strengthened problem-solving, teamwork, and project coordination skills through project-based learning.',
+            ],
             subjects: [
                 'Game Programming',
                 'Virtual Reality',
                 'Computer Graphics',
+                'Mobile Programming',
             ],
         },
         {
             degree: 'Diploma in Computer Science',
-            period: '2020–2023',
-            institution: 'Universiti Teknologi Mara Kampus Jasin (UiTM)',
+            period: 'Sep 2020 - Feb 2023',
+            institution: 'Universiti Teknologi MARA',
             cgpa: 'CGPA: 3.44',
+            descriptions: [
+                'Built a strong foundation in programming, software design, and multimedia application development.',
+                'Gained hands-on experience in object-oriented programming, interactive media, and information system development.',
+                'Applied analytical thinking and structured development practices through practical coursework and team-based projects.',
+            ],
             subjects: [
-                'Object Oriented Programming',
+                'Object-Oriented Programming',
                 'Interactive Multimedia',
                 'Information System Development',
             ],
@@ -69,6 +78,20 @@ user behavior.`,
 
     personalStatement: [
         {
+            role: 'Digital Marketing (Internship)',
+            company: 'Speed Auto Parts & Accessories',
+            location: 'Puchong, Selangor',
+            period: 'September 2025 - December 2025',
+            duration: '3 months',
+            responsibilities: [
+                "Created engaging promotional and educational content for the company's social media platforms using Canva and CapCut.",
+                "Designed a product catalog for the company's profile to support marketing and product presentation.",
+                "Managed and uploaded more than 200 products to the company's Wix website, ensuring product details were organized and up to date.",
+                'Updated new products and returned-item stock across sales channels using SiteGiant.',
+            ],
+            skills: ['Canva', 'CapCut', 'Wix', 'SiteGiant', 'Product Catalog', 'Digital Marketing'],
+        },
+        {
             role: 'Graphic Design (Internship)',
             company: 'Zazira Movers',
             location: 'Seremban, Negeri Sembilan',
@@ -80,6 +103,7 @@ user behavior.`,
                 "Created content for for company's TikTok and Youtube using Capcut and Adobe Premiere Pro.",
                 "Wrote blogs that relevant about the company for company's website",
             ],
+            skills: ['Canva', 'WordPress', 'Wix.com', 'Capcut', 'Adobe Premiere Pro', 'Content Writing'],
         },
     ],
 
@@ -112,6 +136,37 @@ user behavior.`,
             ],
             technologies: ['Android Studio', 'SQL', 'Mobile App Development', 'Role-Based Access'],
         },
+        {
+            title: 'Premium vs Freemium Streaming Platform Preferences',
+            type: 'Big Data and Machine Learning Group Project',
+            period: 'July 2024',
+            repositoryUrl: null,
+            reportUrl: 'https://drive.google.com/drive/folders/1OWoDpfGou8bjNeUARk2zy0CT6hA7VOsB?usp=sharing',
+            description: [
+                'Collected and analysed dataset from UiTM students using structured questionnaires (Google Forms).',
+                'Coordinated with a team of 3 to performed data preprocessing, cleaning, and transformation using Python.',
+                'Built a K-Nearest Neighbors (KNN) classification model to predict user platform preference.',
+                'Achieved 68% prediction accuracy on test data.',
+                'Visualized insights using charts (histogram, heatmap, scatter plot) to analyze user behavior.',
+            ],
+            technologies: ['Python', 'Machine Learning', 'KNN', 'Google Forms', 'Data Visualization'],
+        },
+        {
+            title: 'Arcade Games Assignment',
+            type: 'Construct Game Development Projects',
+            period: 'May - June 2024',
+            repositoryUrl: null,
+            reportUrl: 'https://www.construct.net/en/users/1696474/zhariiff/games',
+            reportLabel: 'View Games',
+            description: [
+                'Created three small browser games in Construct: Racing, Mask Koin, and Diamond Rush.',
+                'Built Racing as a top-down driving game with lap tracking, player position, road tiles, and simple race progression.',
+                'Designed Mask Koin as a platform game where the player collects coins while avoiding enemies and hazards.',
+                'Developed Diamond Rush as a maze-style collection game where the player gathers diamonds while navigating enemies and obstacles.',
+                'Applied core game mechanics such as keyboard controls, collision detection, scoring, level layout, and sprite-based interaction.',
+            ],
+            technologies: ['Construct', 'Game Design', '2D Games', 'Sprite Logic', 'Keyboard Controls'],
+        },
     ],
 
     activities: [
@@ -132,8 +187,14 @@ user behavior.`,
     skills: {
         proficiency: [
             'Unity',
+            'Android Studio',
             'Unreal Engine',
+            'Capcut',
             'Construct',
+            'HTML, CSS, XML',
+            'C#',
+            'C++',
+            'Python',
             'Canva',
             'Adobe Premiere Pro',
         ],

@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { PageShell } from '../components/layout/PageShell'
-import { Card, CardContent } from '../components/ui/Card'
-import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
 import { ScrollReveal } from '../components/ui/ScrollReveal'
 import { resumeData } from '../data/resumeText'
 import { cn } from '../lib/cn'
@@ -10,76 +8,7 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 
 export function Contact() {
     const reducedMotion = useReducedMotion()
-
-    // Form state
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    })
-
-    const [errors, setErrors] = useState<Record<string, string>>({})
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-
-    const validate = () => {
-        const newErrors: Record<string, string> = {}
-
-        if (!formData.name.trim()) newErrors.name = 'Name is required'
-
-        if (!formData.email.trim()) {
-            newErrors.email = 'Email is required'
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Please enter a valid email address'
-        }
-
-        if (!formData.subject.trim()) {
-            newErrors.subject = 'Subject is required'
-        } else if (formData.subject.length < 5) {
-            newErrors.subject = 'Subject must be at least 5 characters'
-        }
-
-        if (!formData.message.trim()) {
-            newErrors.message = 'Message is required'
-        } else if (formData.message.length < 10) {
-            newErrors.message = 'Message must be at least 10 characters'
-        }
-
-        setErrors(newErrors)
-        return Object.keys(newErrors).length === 0
-    }
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-
-        if (!validate()) return
-
-        setIsSubmitting(true)
-
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500))
-
-        setSubmitStatus('success')
-        setIsSubmitting(false)
-        setFormData({ name: '', email: '', subject: '', message: '' })
-
-        // Reset success message after 3 seconds
-        setTimeout(() => setSubmitStatus('idle'), 3000)
-    }
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target
-        setFormData(prev => ({ ...prev, [name]: value }))
-        // Clear error when user types
-        if (errors[name]) {
-            setErrors(prev => {
-                const newErrors = { ...prev }
-                delete newErrors[name]
-                return newErrors
-            })
-        }
-    }
+    const linkedinUrl = 'https://www.linkedin.com/in/muhammad-zharif-azfar-bin-norhasli-786751252'
 
     const contactInfo = [
         {
@@ -167,218 +96,50 @@ export function Contact() {
                     </div>
                 </section>
 
-                {/* Contact Form Section */}
+                {/* LinkedIn CTA */}
                 <section>
                     <ScrollReveal>
-                        <Card variant="glass" className="p-8">
-                            <div className="max-w-2xl mx-auto">
-                                <div className="text-center mb-8">
-                                    <h2 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                                        Get in Touch
-                                    </h2>
-                                    <p className="text-gray-600 dark:text-gray-400">
-                                        Feel free to reach out for collaborations or just a friendly hello
-                                    </p>
-                                </div>
-
-                                <form className="space-y-6" onSubmit={handleSubmit}>
-                                    <div className="grid gap-6 sm:grid-cols-2">
-                                        <div>
-                                            <label
-                                                htmlFor="name"
-                                                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                                            >
-                                                Name <span className="text-red-500">*</span>
-                                            </label>
-                                            <input
-                                                type="text"
-                                                id="name"
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                className={cn(
-                                                    'w-full px-4 py-3 rounded-lg',
-                                                    'bg-white dark:bg-gray-900',
-                                                    'border',
-                                                    errors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:ring-primary-500',
-                                                    'text-gray-900 dark:text-white',
-                                                    'placeholder-gray-400 dark:placeholder-gray-500',
-                                                    'focus:outline-none focus:ring-2 focus:border-transparent',
-                                                    'transition-colors'
-                                                )}
-                                                placeholder="Your name"
-                                            />
-                                            {errors.name && (
-                                                <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-                                            )}
-                                        </div>
-                                        <div>
-                                            <label
-                                                htmlFor="email"
-                                                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                                            >
-                                                Email <span className="text-red-500">*</span>
-                                            </label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                className={cn(
-                                                    'w-full px-4 py-3 rounded-lg',
-                                                    'bg-white dark:bg-gray-900',
-                                                    'border',
-                                                    errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:ring-primary-500',
-                                                    'text-gray-900 dark:text-white',
-                                                    'placeholder-gray-400 dark:placeholder-gray-500',
-                                                    'focus:outline-none focus:ring-2 focus:border-transparent',
-                                                    'transition-colors'
-                                                )}
-                                                placeholder="your@email.com"
-                                            />
-                                            {errors.email && (
-                                                <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label
-                                            htmlFor="subject"
-                                            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                                        >
-                                            Subject <span className="text-red-500">*</span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="subject"
-                                            name="subject"
-                                            value={formData.subject}
-                                            onChange={handleChange}
-                                            className={cn(
-                                                'w-full px-4 py-3 rounded-lg',
-                                                'bg-white dark:bg-gray-900',
-                                                'border',
-                                                errors.subject ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:ring-primary-500',
-                                                'text-gray-900 dark:text-white',
-                                                'placeholder-gray-400 dark:placeholder-gray-500',
-                                                'focus:outline-none focus:ring-2 focus:border-transparent',
-                                                'transition-colors'
-                                            )}
-                                            placeholder="What's this about?"
-                                        />
-                                        {errors.subject && (
-                                            <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
-                                        )}
-                                    </div>
-
-                                    <div>
-                                        <label
-                                            htmlFor="message"
-                                            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                                        >
-                                            Message <span className="text-red-500">*</span>
-                                        </label>
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            rows={5}
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            className={cn(
-                                                'w-full px-4 py-3 rounded-lg resize-none',
-                                                'bg-white dark:bg-gray-900',
-                                                'border',
-                                                errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:ring-primary-500',
-                                                'text-gray-900 dark:text-white',
-                                                'placeholder-gray-400 dark:placeholder-gray-500',
-                                                'focus:outline-none focus:ring-2 focus:border-transparent',
-                                                'transition-colors'
-                                            )}
-                                            placeholder="Your message..."
-                                        />
-                                        {errors.message && (
-                                            <p className="mt-1 text-sm text-red-500">{errors.message}</p>
-                                        )}
-                                    </div>
-
-                                    <div className="text-center">
-                                        <Button
-                                            type="submit"
-                                            size="lg"
-                                            disabled={isSubmitting}
-                                            className={cn(isSubmitting && 'opacity-70 cursor-not-allowed')}
-                                        >
-                                            {isSubmitting ? 'Sending...' : 'Send Message'}
-                                            {!isSubmitting && (
-                                                <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        <div className="mx-auto max-w-2xl">
+                            <a
+                                href={linkedinUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="group block"
+                                aria-label="Open LinkedIn profile in a new tab"
+                            >
+                                <Card
+                                    variant="hud"
+                                    glow
+                                    className={cn(
+                                        'relative overflow-hidden p-0 transition-all duration-300',
+                                        'hover:-translate-y-1 hover:border-neon-cyan/60 hover:shadow-2xl hover:shadow-neon-cyan/10'
+                                    )}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/10 via-neon-purple/10 to-neon-pink/10 opacity-70" />
+                                    <div className="relative flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:justify-between">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-[#0A66C2] text-white shadow-lg shadow-neon-cyan/20">
+                                                <svg className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.53V9H7.1v11.45ZM22.23 0H1.76C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.76 24h20.47c.97 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0Z" />
                                                 </svg>
-                                            )}
-                                        </Button>
-
-                                        {submitStatus === 'success' && (
-                                            <motion.p
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                className="mt-4 text-green-500 font-medium"
-                                            >
-                                                Message sent successfully! I'll get back to you soon.
-                                            </motion.p>
-                                        )}
-                                    </div>
-                                </form>
-                            </div>
-                        </Card>
-                    </ScrollReveal>
-                </section>
-
-                {/* Quick Actions */}
-                <section>
-                    <ScrollReveal>
-                        <div className="grid gap-4 sm:grid-cols-2">
-                            <a
-                                href={`mailto:${resumeData.personal.email}`}
-                                className="block"
-                            >
-                                <Card variant="hud" className="p-6 h-full hover:border-neon-cyan/40 transition-colors">
-                                    <div className="flex items-center gap-4">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neon-cyan/20 text-neon-cyan">
-                                            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-mono uppercase tracking-wider text-neon-cyan">
+                                                    Professional Network
+                                                </p>
+                                                <h3 className="mt-1 font-display text-xl font-bold text-gray-900 dark:text-white">
+                                                    Connect with me on LinkedIn
+                                                </h3>
+                                                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                                                    View my profile, projects, and professional background.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="inline-flex items-center justify-center gap-2 rounded-lg border border-neon-cyan/40 bg-neon-cyan/10 px-4 py-2 text-sm font-semibold text-neon-cyan transition-colors group-hover:bg-neon-cyan group-hover:text-gray-950">
+                                            View Profile
+                                            <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17 17 7M9 7h8v8" />
                                             </svg>
-                                        </div>
-                                        <div>
-                                            <h3 className="font-display font-semibold text-gray-900 dark:text-white">
-                                                Email Me Directly
-                                            </h3>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                                {resumeData.personal.email}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </a>
-
-                            <a
-                                href={`tel:${resumeData.personal.mobile}`}
-                                className="block"
-                            >
-                                <Card variant="hud" className="p-6 h-full hover:border-neon-purple/40 transition-colors">
-                                    <div className="flex items-center gap-4">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neon-purple/20 text-neon-purple">
-                                            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 className="font-display font-semibold text-gray-900 dark:text-white">
-                                                Call Me
-                                            </h3>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                                {resumeData.personal.mobile}
-                                            </p>
                                         </div>
                                     </div>
                                 </Card>
