@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { PageShell } from '../components/layout/PageShell'
 import { Card } from '../components/ui/Card'
 import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ui/ScrollReveal'
-import { resumeData } from '../data/resumeText'
+import { experienceTimeline } from '../data/resumeText'
 import { cn } from '../lib/cn'
 
 export function Experience() {
@@ -27,8 +27,7 @@ export function Experience() {
                         <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-neon-cyan via-neon-purple to-neon-pink" />
 
                         <StaggerContainer className="space-y-8">
-                            {/* Combine both working experiences and personal statement (internship) */}
-                            {[...resumeData.personalStatement, ...resumeData.workingExperiences].map((exp, index) => (
+                            {experienceTimeline.map((exp, index) => (
                                 <StaggerItem key={index}>
                                     <div className="relative pl-12 md:pl-20">
                                         {/* Timeline dot */}

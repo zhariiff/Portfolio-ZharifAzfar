@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { cn } from '../lib/cn'
 import { useReducedMotion } from '../hooks/useReducedMotion'
-import { resumeData } from '../data/resumeText'
+import { experienceTimeline, resumeData } from '../data/resumeText'
 import { Button } from '../components/ui/Button'
 import { ScrollReveal } from '../components/ui/ScrollReveal'
 import { getPageVariants } from '../lib/motion'
@@ -260,7 +260,7 @@ export function Home() {
                         </div>
 
                         <div className="grid gap-6 md:grid-cols-2">
-                            {[...resumeData.personalStatement, ...resumeData.workingExperiences].map((job, index) => (
+                            {experienceTimeline.map((job, index) => (
                                 <Link to="/experience" key={index} className="block h-full">
                                     <Hover3D className="h-full">
                                         <div className={cn(

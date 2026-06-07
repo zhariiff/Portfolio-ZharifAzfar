@@ -2,7 +2,7 @@ import { PageShell } from '../components/layout/PageShell'
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card'
 import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ui/ScrollReveal'
 import { Button } from '../components/ui/Button'
-import { resumeData } from '../data/resumeText'
+import { experienceTimeline, resumeData } from '../data/resumeText'
 import { cn } from '../lib/cn'
 
 export function Resume() {
@@ -161,7 +161,7 @@ export function Resume() {
                     </ScrollReveal>
 
                     <StaggerContainer className="space-y-6">
-                        {[...resumeData.personalStatement, ...resumeData.workingExperiences].map((exp, index) => (
+                        {experienceTimeline.map((exp, index) => (
                             <StaggerItem key={index}>
                                 <Card variant="hud" glow className="p-6">
                                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">

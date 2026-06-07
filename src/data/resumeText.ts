@@ -216,4 +216,10 @@ user behavior.`,
     },
 } as const
 
+export const experienceTimeline = [
+    resumeData.personalStatement[0],
+    ...resumeData.workingExperiences,
+    ...resumeData.personalStatement.slice(1),
+] as const
+
 export type ResumeData = typeof resumeData
