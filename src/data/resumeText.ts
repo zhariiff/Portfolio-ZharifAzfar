@@ -9,10 +9,10 @@ export const resumeData = {
         email: 'zharifazfar61@gmail.com',
     },
 
-    summary: `I am a fresh Bachelor of Computer Science (Hons.) Multimedia Computing graduate with a strong interest in interactive media, game development, and creative digital experiences.
-Through academic projects and internship experiences, I have worked with tools such as Unity, Unreal Engine, Construct, Canva, CapCut, and Wix while developing both technical and creative skills.
-I also have exposure to big data and machine learning through academic projects involving data preprocessing, visualization, and K-Nearest Neighbors (KNN) classification using Python.
-I am currently looking for opportunities where I can contribute, grow with a supportive team, and continue learning new technologies in design, development, data, and user experience.`,
+    summary: `I am a Bachelor of Computer Science (Hons.) Multimedia Computing graduate with a strong interest in interactive media, game development, and creative digital experiences.
+My academic projects and internship experience have helped me build practical skills with Unity, Unreal Engine, Construct, Canva, CapCut, Wix, and other creative technologies.
+I also have hands-on exposure to big data and machine learning, including data preprocessing, visualization, and K-Nearest Neighbors (KNN) classification using Python.
+I am now seeking opportunities where I can contribute to meaningful digital projects, grow with a supportive team, and continue developing my skills across design, development, data, and user experience.`,
 
     education: [
         {
