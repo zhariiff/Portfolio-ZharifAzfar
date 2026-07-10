@@ -287,6 +287,16 @@ function getSkillLogo(skill: string): ReactNode {
                 <path fill="#D566FF" d="M19 43V20h11c5 0 9 3 9 8s-4 8-9 8h-5v7h-6Zm6-12h4c2 0 4-1 4-3s-2-3-4-3h-4v6Zm17 12V27h5l.3 2c1-2 3-3 6-3v5c-4 0-6 2-6 6v6h-5.3Z" />
             </svg>
         ),
+        'Microsoft Excel': (
+            <svg viewBox="0 0 64 64" role="img" aria-label="Microsoft Excel logo" className="h-full w-full">
+                <rect width="42" height="46" x="17" y="9" rx="4" fill="#21A366" />
+                <path fill="#107C41" d="M17 16h42v8H17z" />
+                <path fill="#33C481" d="M38 24h21v31H38z" />
+                <path fill="#185C37" d="M5 17h32v30L5 52V17Z" />
+                <path fill="#fff" d="m14 25 5 8-5 8h6l2.4-4.5L25 41h6l-5.4-8 5-8h-5.8l-2.2 4.2L20.4 25H14Z" />
+                <path stroke="#fff" strokeWidth="2" d="M42 29h12M42 37h12M42 45h12" opacity="0.8" />
+            </svg>
+        ),
     }
 
     return logos[skill] || (
@@ -299,17 +309,18 @@ function getSkillLogo(skill: string): ReactNode {
 
 function getSkillLevel(skill: string): number {
     const levels: Record<string, number> = {
-        'Unity': 50,
-        'Android Studio': 50,
-        'Unreal Engine': 50,
-        'Capcut': 85,
-        'Construct': 65,
-        'HTML, CSS, XML': 55,
+        'Unity': 65,
+        'Android Studio': 60,
+        'Unreal Engine': 55,
+        'Capcut': 80,
+        'Construct': 70,
+        'HTML, CSS, XML': 50,
         'C#': 50,
-        'C++': 45,
-        'Python': 56,
-        'Canva': 90,
-        'Adobe Premiere Pro': 65,
+        'C++': 50,
+        'Python': 50,
+        'Canva': 85,
+        'Adobe Premiere Pro': 70,
+        'Microsoft Excel': 30,
     }
     return levels[skill] || 75
 }

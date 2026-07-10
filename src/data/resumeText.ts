@@ -54,6 +54,7 @@ I am now seeking opportunities where I can contribute to meaningful digital proj
         {
             title: 'Google Analytics',
             date: 'October 2022',
+            expiresDate: 'October 2023',
             provider: 'Google Skillshop',
             type: 'Online course',
             description: `Completed Google Analytics course via Google Skillshop, gaining key insights into website traffic and
@@ -174,7 +175,7 @@ user behavior.`,
             title: 'Active Member',
             organization: 'Multimedia Computing Society',
             location: 'Universiti Teknologi Mara Kampus Jasin',
-            period: '2023-',
+            period: '2023-2025',
         },
         {
             title: 'AJK Multimedia',
@@ -197,6 +198,7 @@ user behavior.`,
             'Python',
             'Canva',
             'Adobe Premiere Pro',
+            'Microsoft Excel',
         ],
         softSkills: [
             'Root Cause Analysis',

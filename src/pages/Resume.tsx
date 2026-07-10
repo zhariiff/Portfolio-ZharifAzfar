@@ -141,9 +141,12 @@ export function Resume() {
                                                 {course.description}
                                             </p>
                                         </div>
-                                        <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
-                                            {course.date}
-                                        </span>
+                                        <div className="text-xs font-mono text-gray-500 dark:text-gray-400 md:text-right">
+                                            <span className="block">Completed {course.date}</span>
+                                            {course.expiresDate && (
+                                                <span className="block mt-1">Expires {course.expiresDate}</span>
+                                            )}
+                                        </div>
                                     </div>
                                 </Card>
                             </StaggerItem>
