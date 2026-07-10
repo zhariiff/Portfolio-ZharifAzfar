@@ -116,8 +116,8 @@ export function Experience() {
                     <ScrollReveal>
                         <div className="grid gap-4 sm:grid-cols-3">
                             {[
-                                { value: '10+', label: 'Months Experience', color: 'from-neon-cyan to-neon-purple' },
-                                { value: '3', label: 'Positions Held', color: 'from-neon-purple to-neon-pink' },
+                                { value: '9', label: 'Months Experience', color: 'from-neon-cyan to-neon-purple' },
+                                { value: '2', label: 'Positions Held', color: 'from-neon-purple to-neon-pink' },
                                 { value: '12+', label: 'Skills Applied', color: 'from-neon-pink to-neon-cyan' },
                             ].map((stat, index) => (
                                 <motion.div

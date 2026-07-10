@@ -79,32 +79,32 @@ user behavior.`,
 
     personalStatement: [
         {
-            role: 'Digital Marketing (Internship)',
+            role: 'Digital Marketing & Data Management Intern',
             company: 'Speed Auto Parts & Accessories',
             location: 'Puchong, Selangor',
             period: 'September 2025 - December 2025',
             duration: '3 months',
             responsibilities: [
-                "Created engaging promotional and educational content for the company's social media platforms using Canva and CapCut.",
-                "Designed a product catalog for the company's profile to support marketing and product presentation.",
-                "Managed and uploaded more than 200 products to the company's Wix website, ensuring product details were organized and up to date.",
-                'Updated new products and returned-item stock across sales channels using SiteGiant.',
+                "Created engaging promotional and educational content for the company's social media using Canva and CapCut.",
+                "Created a product catalog for the company's profile using Canva.",
+                'Gained practical exposure to corporate data workflows by managing and auditing a digital catalog database of 200+ product SKUs via Wix.',
+                'Learned and operated the SiteGiant e-commerce ERP system to process incoming inventory data, log stock returns, and synchronize multi-channel listings.',
             ],
-            skills: ['Canva', 'CapCut', 'Wix', 'SiteGiant', 'Product Catalog', 'Digital Marketing'],
+            skills: ['Canva', 'CapCut', 'Wix', 'SiteGiant', 'Product Catalog', 'Data Management'],
         },
         {
-            role: 'Graphic Design (Internship)',
+            role: 'Web & Graphic Design Intern',
             company: 'Zazira Movers',
             location: 'Seremban, Negeri Sembilan',
-            period: 'September 2022 – February 2023',
+            period: 'September 2022 - February 2023',
             duration: '6 months',
             responsibilities: [
-                "Designed posters for company's social media using canva.",
-                "Made a modification to company's website using WordPress and Wix.com.",
-                "Created content for for company's TikTok and Youtube using Capcut and Adobe Premiere Pro.",
-                "Wrote blogs that relevant about the company for company's website",
+                "Designed posters for company's social media using Canva.",
+                'Assisted with front-end website maintenance, routine troubleshooting, and structured text updates using WordPress and Wix.',
+                "Created content for company's TikTok and YouTube using CapCut and Adobe Premiere Pro.",
+                'Authored basic SEO-driven blog posts for the corporate site to capture and analyze organic consumer web engagement metrics.',
             ],
-            skills: ['Canva', 'WordPress', 'Wix.com', 'Capcut', 'Adobe Premiere Pro', 'Content Writing'],
+            skills: ['Canva', 'WordPress', 'Wix', 'CapCut', 'Adobe Premiere Pro', 'SEO Content'],
         },
     ],
 
@@ -220,7 +220,6 @@ user behavior.`,
 
 export const experienceTimeline = [
     resumeData.personalStatement[0],
-    ...resumeData.workingExperiences,
     ...resumeData.personalStatement.slice(1),
 ] as const
 
