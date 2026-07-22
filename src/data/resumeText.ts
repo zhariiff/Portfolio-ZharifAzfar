@@ -79,7 +79,7 @@ user behavior.`,
 
     personalStatement: [
         {
-            role: 'Digital Marketing & Data Management Intern',
+            role: 'Digital Marketing Intern',
             company: 'Speed Auto Parts & Accessories',
             location: 'Puchong, Selangor',
             period: 'September 2025 - December 2025',
