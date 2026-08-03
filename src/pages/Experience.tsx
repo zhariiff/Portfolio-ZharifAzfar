@@ -87,7 +87,7 @@ export function Experience() {
 
                                             {'skills' in exp && (
                                                 <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800">
-                                                    <div className="flex flex-wrap gap-2">
+                                                    <div className="flex flex-wrap items-center gap-2">
                                                         {exp.skills.map((skill) => (
                                                             <span
                                                                 key={skill}
@@ -100,6 +100,16 @@ export function Experience() {
                                                                 {skill}
                                                             </span>
                                                         ))}
+                                                        {'taskLink' in exp && (
+                                                            <a
+                                                                href={exp.taskLink}
+                                                                target="_blank"
+                                                                rel="noreferrer"
+                                                                className="ml-auto rounded-md border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-2 text-sm font-medium text-primary-700 transition-colors hover:bg-neon-cyan/20 dark:text-neon-cyan"
+                                                            >
+                                                                View Task
+                                                            </a>
+                                                        )}
                                                     </div>
                                                 </div>
                                             )}
