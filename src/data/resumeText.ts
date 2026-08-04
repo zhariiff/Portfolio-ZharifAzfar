@@ -106,7 +106,7 @@ user behavior.`,
                 'Authored basic SEO-driven blog posts for the corporate site to capture and analyze organic consumer web engagement metrics.',
             ],
             skills: ['Canva', 'WordPress', 'Wix', 'CapCut', 'Adobe Premiere Pro', 'SEO Content'],
-            taskLink: 'https://drive.google.com/file/d/13pyePWDgIV7qxZs0xVOsq0kc5qalo2ry/view?usp=sharing',
+            taskLink: 'https://drive.google.com/file/d/1jSMEHSUGiL1BEI4QZWmEJEr_1A1Cb1co/view?usp=sharing',
         },
     ],
 
