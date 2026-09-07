@@ -154,22 +154,6 @@ user behavior.`,
             ],
             technologies: ['Python', 'Machine Learning', 'KNN', 'Google Forms', 'Data Visualization'],
         },
-        {
-            title: 'Arcade Games Assignment',
-            type: 'Construct Game Development Projects',
-            period: 'May - June 2024',
-            repositoryUrl: null,
-            reportUrl: 'https://www.construct.net/en/users/1696474/zhariiff/games',
-            reportLabel: 'View Games',
-            description: [
-                'Created three small browser games in Construct: Racing, Mask Koin, and Diamond Rush.',
-                'Built Racing as a top-down driving game with lap tracking, player position, road tiles, and simple race progression.',
-                'Designed Mask Koin as a platform game where the player collects coins while avoiding enemies and hazards.',
-                'Developed Diamond Rush as a maze-style collection game where the player gathers diamonds while navigating enemies and obstacles.',
-                'Applied core game mechanics such as keyboard controls, collision detection, scoring, level layout, and sprite-based interaction.',
-            ],
-            technologies: ['Construct', 'Game Design', '2D Games', 'Sprite Logic', 'Keyboard Controls'],
-        },
     ],
 
     activities: [
