@@ -158,7 +158,7 @@ user behavior.`,
             type: 'Big Data and Machine Learning Group Project',
             period: 'July 2024',
             repositoryUrl: null,
-            reportUrl: 'https://drive.google.com/drive/folders/1OWoDpfGou8bjNeUARk2zy0CT6hA7VOsB?usp=sharing',
+            reportUrl: '/CSC649%20-Big%20Data%20Project%20Report%20.pdf',
             description: [
                 'Collected and analysed dataset from UiTM students using structured questionnaires (Google Forms).',
                 'Coordinated with a team of 3 to performed data preprocessing, cleaning, and transformation using Python.',
