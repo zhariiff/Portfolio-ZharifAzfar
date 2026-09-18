@@ -4,7 +4,7 @@
 export const resumeData = {
     personal: {
         name: 'MUHAMMAD ZHARIF AZFAR BIN NORHASLI',
-        address: '907, Jalan Semarak 16, Taman Panchor Jaya, 70400 Seremban.',
+        address: '100, Jalan Rahim Kajai, Taman Tun Dr Ismail, 60000 Kuala Lumpur',
         mobile: '01123424680',
         email: 'zharifazfar61@gmail.com',
     },
