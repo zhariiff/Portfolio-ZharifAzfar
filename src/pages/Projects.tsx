@@ -82,7 +82,7 @@ export function Projects() {
                                                     )}
                                                     aria-label={`Open ${project.title.replace('\n', ' ')} link`}
                                                 >
-                                                    {'reportLabel' in project ? project.reportLabel : 'View Report'}
+                                                    View Report
                                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 3h7l5 5v13H7V3z" />
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3v5h5M10 14h6M10 18h4" />
