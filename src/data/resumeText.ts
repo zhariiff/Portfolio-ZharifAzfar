@@ -79,6 +79,20 @@ user behavior.`,
 
     personalStatement: [
         {
+            role: 'K-Youth Development Programme 2026 Apprentice',
+            company: 'M&N Group of Companies',
+            location: 'Bukit Damansara, Kuala Lumpur',
+            period: 'August 2026 - Present',
+            duration: 'Present',
+            responsibilities: [
+                'Completed an intensive professional development bootcamp facilitated by Pepper Labs, focusing on workplace readiness, communication, and artificial intelligence.',
+                'Created promotional social media content, including videos and posters for Instagram and TikTok, using Canva and CapCut.',
+                'Designed professional digital posters and marketing assets for LinkedIn using Canva, tailoring visual communication for a corporate audience.',
+            ],
+            skills: ['Canva', 'CapCut', 'Social Media Content', 'LinkedIn Marketing', 'Artificial Intelligence'],
+            taskLink: 'https://drive.google.com/drive/folders/1hNgGWI7VtCJokzFpoFxtg2TESzmtrQRD?usp=sharing',
+        },
+        {
             role: 'Digital Marketing Intern',
             company: 'Speed Auto Parts & Accessories',
             location: 'Puchong, Selangor',
